@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking paper wasp posture at the nest | Caleb C. Vogt, PhD</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=1794001676">
+  <script src="/assets/js/page-transitions.js" defer></script>
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">
+      <img src="/assets/images/site/fieldNeuroRodent.png" alt="Logo" class="site-logo">
+      <div class="site-title-text">
+        <a href="/"><strong>Caleb C. Vogt, PhD</strong></a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/"><strong>Home</strong></a></li>
+        <li><a href="/publications"><strong>Publications</strong></a></li>
+        <li><a href="/projects"><strong>Projects</strong></a></li>
+        <li><a href="/gallery/"><strong>Gallery</strong></a></li>
+        <!-- <li><a href="/research"><strong>Research</strong></a></li> -->
+        <li><a href="/teaching/"><strong>Teaching</strong></a></li>
+        <!-- <li><a href="/posts"><strong>Posts</strong></a></li> -->
+        <li><a href="/resources"><strong>Resources</strong></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="header-spacer" aria-hidden="true"></div>
+<script src="/assets/js/site-header.js" defer></script>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+
+      <article class="project-detail">
+        <a class="project-back" href="/projects">&larr; All projects</a>
+
+        <h1 class="project-detail-title">Tracking paper wasp posture at the nest</h1>
+
+        <div class="project-detail-meta">
+          <span>2020–2023</span>
+          <span class="sep">·</span><span>Sheehan Lab, Cornell</span>
+          <span class="sep">·</span><span class="role">Co-first author: pose tracking</span>
+        </div>
+
+        
+        <div class="project-tags project-detail-tags">
+          <span class="project-tag">Computer vision</span><span class="project-tag">SLEAP</span><span class="project-tag">DeepLabCut</span><span class="project-tag">Pose estimation</span><span class="project-tag">Insect behavior</span>
+        </div>
+        
+
+        
+        <div class="project-links project-detail-links">
+          <a href="https://doi.org/10.1002/ece3.10436">Ecology and Evolution (2023)</a>
+        </div>
+        
+        
+        <div class="project-detail-hero">
+          <video autoplay muted loop playsinline preload="metadata" poster="/projects/wasp-vigilance/dlc_vs_sleap_poster.jpg" aria-label="A paper wasp foundress on her nest, tracked by DeepLabCut (left) and SLEAP (right)">
+            <source src="/projects/wasp-vigilance/dlc_vs_sleap.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+
+        <p class="project-detail-summary">For Andrew Legan's field study of nest-guarding paper wasps, published in Ecology and Evolution, I tracked the posture of wild foundresses on their nests with SLEAP pose estimation.</p>
+
+        <div class="project-detail-body">
+          <p>Andrew Legan’s study asked how a lone northern paper wasp foundress
+(<em>Polistes fuscatus</em>) behaves after defending her nest from an intruder. At
+Cornell’s Liddell Field Station in July 2020, each foundress was filmed on her
+nest for 320 s before, during and after the presentation of a simulated intruder
+(a pinned wasp) or of a plain wooden dowel. My part was tracking the wasps’
+posture in those videos.</p>
+
+<h2 id="what-i-did">What I did</h2>
+
+<ul>
+  <li><strong>Pose tracking with <a href="https://sleap.ai">SLEAP</a>.</strong> I trained a SLEAP model on
+seven points on each wasp: both antenna tips, the head, the
+thorax–abdomen bridge, the abdomen tip and both wingtips. The videos were
+converted to grayscale, and 20 frames of each 320-s interval were labelled by
+hand.</li>
+  <li><strong>SLEAP vs DeepLabCut.</strong> In a preliminary analysis the wasps were also tracked
+with <a href="https://github.com/DeepLabCut/DeepLabCut">DeepLabCut</a> (ten points).
+SLEAP did better on these videos, and all of the paper’s measurements come
+from the SLEAP tracking. The clip at the top shows the same foundress tracked
+by each.</li>
+  <li><strong>Measures from the tracked points:</strong> the distance each wasp travelled (head
+and thorax), the angle between her wingtips (wing extension) and the angle
+between her antenna tips (antennal separation).</li>
+</ul>
+
+<h2 id="the-paper">The paper</h2>
+
+<p>Legan, A.W.*, <strong>Vogt, C.C.*</strong>, &amp; Sheehan, M.J. (2023). Postural analysis
+reveals persistent changes in paper wasp foundress behavioral state after
+conspecific challenge. <em>Ecology and Evolution</em>, 13(9), e10436.
+<a href="https://doi.org/10.1002/ece3.10436">doi:10.1002/ece3.10436</a>
+<br />*These authors contributed equally.</p>
+
+<p>Read the paper for what the wasps did and what it means for how they guard
+their nests.</p>
+
+<p>Thank you to Andrew Legan, who led this study, and to Michael Sheehan.</p>
+
+        </div>
+      </article>
+
+    </div>
+  </main>
+  <footer>
+  <div class="container">
+    <p>Caleb C. Vogt &copy; 2026</p>
+    <div class="social-links">
+      <a href="https://github.com/calebvogt">GitHub</a> |
+      <a href="https://www.youtube.com/@CalebVogtPhD">YouTube</a> |
+      <a href="https://scholar.google.com/citations?user=0NAwiPEAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0001-9315-3775">OrcID</a> |
+      <a href="https://www.linkedin.com/in/caleb-c-vogt/">LinkedIn</a>
+    </div>
+    <p class="site-updated">Site updated: 2026-11-06 14:47:56 MST</p>
+  </div>
+</footer>
+
+</body>
+</html>

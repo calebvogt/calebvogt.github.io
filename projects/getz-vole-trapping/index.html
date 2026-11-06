@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getz Vole Trapping Dataset | Caleb C. Vogt, PhD</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=1794001676">
+  <script src="/assets/js/page-transitions.js" defer></script>
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">
+      <img src="/assets/images/site/fieldNeuroRodent.png" alt="Logo" class="site-logo">
+      <div class="site-title-text">
+        <a href="/"><strong>Caleb C. Vogt, PhD</strong></a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/"><strong>Home</strong></a></li>
+        <li><a href="/publications"><strong>Publications</strong></a></li>
+        <li><a href="/projects"><strong>Projects</strong></a></li>
+        <li><a href="/gallery/"><strong>Gallery</strong></a></li>
+        <!-- <li><a href="/research"><strong>Research</strong></a></li> -->
+        <li><a href="/teaching/"><strong>Teaching</strong></a></li>
+        <!-- <li><a href="/posts"><strong>Posts</strong></a></li> -->
+        <li><a href="/resources"><strong>Resources</strong></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="header-spacer" aria-hidden="true"></div>
+<script src="/assets/js/site-header.js" defer></script>
+
+  
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <link rel="stylesheet" href="/projects/getz-vole-trapping/explorer.css?v=1794001676">
+
+<div id="gx" data-base="/projects/getz-vole-trapping/data/">
+
+  <a class="project-back" href="/projects">&larr; All projects</a>
+
+  <div class="gx-hero">
+    <p class="gx-kicker">Open data · University of Illinois · 1971–1997</p>
+    <h1>The Getz Vole Trapping Dataset</h1>
+    <p class="gx-lede">For twenty-five years, Lowell Getz and his crews live-trapped wild prairie voles and
+      meadow voles every month in alfalfa, bluegrass, and tallgrass prairie fields outside Urbana, Illinois.
+      Every animal was individually marked, so each record says who was caught, in which trap, and when.
+      This page lets you explore those records directly.</p>
+    <p class="gx-byline">By Caleb C. Vogt and Lowell L. Getz · built with Claude Opus 5.5</p>
+    <div class="gx-stats" id="gx-stats"></div>
+  </div>
+
+  <aside class="gx-credit">
+    <p><strong>Authors.</strong> Caleb C. Vogt and Lowell L. Getz. Dr. Getz asked to be a co-author on any
+      work that uses his data as its primary data set. This explorer is built entirely on his data, so he is
+      listed as one. We would also very much like to avoid any creaks and bumps in the night.</p>
+    <p><strong>Thanks.</strong> To Dr. Lowell L. Getz, for decades of field work that helped establish the
+      prairie vole as a model organism, and for releasing these data openly so that future generations can
+      work with them and work through them. And to Joyce E. Hofmann, Betty McGuire, Madan K. Oli, and the
+      paid assistants and more than 1,000 undergraduate volunteers who worked the grids.</p>
+    <p><strong>Data.</strong> Original files at <a href="https://www.life.illinois.edu/getz/">life.illinois.edu/getz</a>;
+      archived at EDI: <a href="https://doi.org/10.6073/pasta/62617e944d053ba553d37cc4568c2367">25-year study</a>,
+      <a href="https://doi.org/10.6073/pasta/e62ec4197e8e2a687f2ef9d2c13cc3c0">twice-weekly alfalfa study</a>,
+      <a href="https://doi.org/10.6073/pasta/920c200ed6b3dd3dea83e8a62e5dff44"><i>Blarina</i> densities</a>.
+      If you plan to analyze and publish these data, read Getz's
+      <a href="https://www.life.illinois.edu/getz/">usage request</a> first.</p>
+    <p><strong>How this was made.</strong> The data cleaning, processing, and interactive visualizations were
+      built with <a href="https://www.anthropic.com/claude">Claude Opus 5.5</a> (Anthropic), working with Caleb
+      Vogt. The code is on <a href="https://github.com/calebvogt/GetzVoleTrapping">GitHub</a>. Any errors in
+      processing or display are Caleb Vogt's, not Dr. Getz's.</p>
+  </aside>
+
+  <section class="gx-section" id="gx-how">
+    <h2>How the study worked</h2>
+    <p class="gx-note">Voles were never kept in enclosures. The study fields were open and unfenced, so animals
+      were born, moved in, moved out, and died on their own. Getz's crews sampled them by setting live-traps on a
+      fixed grid, marking every animal, and releasing it where it was caught.</p>
+    <div class="gx-terms">
+      <div class="gx-term"><b>Grid</b><span>A field plot, 0.5–2 ha, with traps at fixed points 10 m apart. Getz ran
+        19 numbered grids in three habitats, but usually only one to three per habitat at a time (timeline below).</span></div>
+      <div class="gx-term"><b>Station</b><span>One trap at one fixed point on a grid. Station numbers are Getz's
+        own codes; the map rebuilds where each one sat.</span></div>
+      <div class="gx-term"><b>Session</b><span>One monthly round of trapping on a grid: traps set for three days
+        and checked six times (about 8:00 and 15:00). Every active grid got one session each month.</span></div>
+      <div class="gx-term"><b>Check &amp; capture</b><span>A <em>check</em> is one visit to every trap. A
+        <em>capture</em> is one animal found in one trap on one check. Animals were released each time, so one
+        vole can be captured several times in a session.</span></div>
+      <div class="gx-term"><b>Nest capture</b><span>Alfalfa II–III only, 1982–87. For a social-behavior study,
+        traps also went around every known nest each Monday–Tuesday and Thursday–Friday. One nest capture means
+        the animal was caught at least once in that two-day period.</span></div>
+      <div class="gx-term"><b>Known alive</b><span>Density counts an animal as present in every session between
+        its first and last capture, even ones it skipped (the "minimum number known alive").</span></div>
+    </div>
+    <p class="gx-example">Example: <i>"15 captures in 6 sessions"</i> means the animal was trapped 15 times
+      across 6 different months, about 2–3 times in each three-day session.</p>
+
+    <h3 class="gx-h3">Where and when: the 19 grids</h3>
+    <p class="gx-note">Grids sat in two places 6 km northeast of Urbana: the university's Phillips Tract and
+      Trelease Prairie. Alfalfa fields were replanted as they aged, so the five alfalfa grids are mostly successive
+      fields, not parallel ones. Some grid numbers re-use the same ground: bluegrass grid 6 was later split into 9,
+      10, and 11. Solid bars are the unmanipulated controls that make up the boom-and-bust chart; outlined bars
+      are experiments. Click a bar to open that grid.</p>
+    <div id="gx-timeline"></div>
+
+    <h3 class="gx-h3">Every session on every grid</h3>
+    <p class="gx-note">Each cell is one grid in one month. Brighter cells mean more animals were caught, and blank
+      cells mean the grid wasn't trapped that month. Click a cell to open that grid and month.</p>
+    <div id="gx-coverage"><canvas></canvas></div>
+  </section>
+
+  <section class="gx-section" id="gx-pulse">
+    <h2>Twenty-five years of boom and bust</h2>
+    <p class="gx-note">Population density (animals known alive per hectare) in the unmanipulated grids, stitched
+      into one monthly series per habitat. Each panel has its own y-scale. Click anywhere on a panel to open the
+      grid behind that month.</p>
+    <div class="gx-controls">
+      <label>Lines <select id="gx-pulse-mode">
+        <option value="sex-MO" selected>Males vs. females: prairie voles</option>
+        <option value="sex-MP">Males vs. females: meadow voles</option>
+        <option value="species">Prairie vs. meadow voles</option>
+      </select></label>
+    </div>
+    <div class="gx-legend" id="gx-pulse-legend"></div>
+    <div id="gx-pulse-panels"></div>
+  </section>
+
+  <section class="gx-section" id="gx-turn">
+    <h2>Arrivals and departures</h2>
+    <p class="gx-note">Populations rise when new animals arrive (born on the grid or moving in) faster than known
+      animals disappear (dying or moving away). Trapping can't tell births from immigrants, or deaths from
+      emigrants, but it shows how fast animals turn over.</p>
+    <div class="gx-controls">
+      <label>Species <select id="gx-r-sp"><option value="MO">Prairie vole</option><option value="MP">Meadow vole</option></select></label>
+      <label>Habitat <select id="gx-r-hab"><option value="all">All</option><option value="alfalfa">Alfalfa</option>
+        <option value="bluegrass">Bluegrass</option><option value="tallgrass">Tallgrass prairie</option></select></label>
+    </div>
+    <div class="gx-mass-grid">
+      <div>
+        <h3 class="gx-h3">How long animals stay</h3>
+        <p class="gx-note" id="gx-r-note">Share of animals still known alive (caught again later) at each month
+          after their first capture.</p>
+        <div id="gx-r-res"></div>
+      </div>
+      <div>
+        <h3 class="gx-h3">When new animals appear</h3>
+        <p class="gx-note">Share of the animals caught in each calendar month that were being caught for the first
+          time.</p>
+        <div id="gx-r-new"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gx-section" id="gx-exp">
+    <h2>Getz's experiments</h2>
+    <p class="gx-note">Alongside the long-term record, Getz ran field experiments. Some grids got supplemental
+      food (rabbit chow at every station). On others, one species was removed every month, to see how the
+      remaining species did without its competitor. Each panel compares a treated grid with a nearby
+      unmanipulated control over the same months.</p>
+    <div class="gx-legend" id="gx-exp-legend"></div>
+    <div class="gx-exp-grid" id="gx-exp-panels"></div>
+  </section>
+
+  <section class="gx-section" id="gx-site">
+    <h2>Inside a trapping grid</h2>
+    <p class="gx-note">Each row below is one marked animal. Its line runs from first to last capture, and each mark
+      along it is one capture. Play through the sessions to see who was caught where. Click any animal, in
+      the rows or on the map, to follow just that animal around the grid.</p>
+
+    <div class="gx-controls">
+      <label>Grid <select id="gx-site-select"></select></label>
+      <label>Species <select id="gx-sp">
+        <option value="both">Both</option><option value="MO">Prairie vole</option><option value="MP">Meadow vole</option>
+      </select></label>
+      <label>Sex <select id="gx-sex">
+        <option value="0">All</option><option value="1">Males</option><option value="2">Females</option>
+      </select></label>
+      <label>Caught in <select id="gx-min">
+        <option value="1">1+ sessions</option><option value="2" selected>2+ sessions</option>
+        <option value="3">3+ sessions</option><option value="5">5+ sessions</option>
+      </select></label>
+      <label>Sort <select id="gx-sort">
+        <option value="first">First capture</option><option value="span">Time known alive</option>
+        <option value="n">Number of captures</option>
+      </select></label>
+      <label>Color by <select id="gx-color">
+        <option value="sex" selected>Sex</option><option value="species">Species</option>
+      </select></label>
+      <label class="gx-check" id="gx-nest-wrap" hidden><input type="checkbox" id="gx-nest" checked>
+        Twice-weekly nest captures</label>
+    </div>
+    <p class="gx-siteinfo" id="gx-siteinfo"></p>
+
+    <div class="gx-site-grid">
+      <div class="gx-site-left">
+        <div class="gx-legend" id="gx-site-legend"></div>
+        <div id="gx-density"></div>
+        <div class="gx-legend gx-legend-sm" id="gx-turnover-legend"></div>
+        <div id="gx-turnover"></div>
+        <div class="gx-life-head"><span id="gx-life-count"></span><span class="gx-marks" id="gx-marks"></span></div>
+        <div class="gx-life-wrap">
+          <span class="gx-ylab" aria-hidden="true">Animals (one row each)</span>
+          <div id="gx-life" tabindex="0" aria-label="Capture histories, one row per animal"><canvas></canvas></div>
+        </div>
+        <div id="gx-life-axis"></div>
+      </div>
+      <div class="gx-site-right">
+        <div class="gx-mode" id="gx-mode"></div>
+        <div class="gx-player">
+          <button id="gx-prev" aria-label="Previous">&#9664;</button>
+          <button id="gx-play" aria-label="Play">Play</button>
+          <button id="gx-next" aria-label="Next">&#9654;</button>
+          <input type="range" id="gx-slider" min="0" max="0" value="0" aria-label="Step">
+        </div>
+        <p class="gx-session-label" id="gx-session-label"></p>
+        <div id="gx-grid"></div>
+        <p class="gx-grid-note" id="gx-grid-note"></p>
+        <h3 class="gx-h3 gx-h3-sub" id="gx-net-title">Caught together this session</h3>
+        <div id="gx-net"></div>
+        <p class="gx-grid-note" id="gx-net-note"></p>
+        <div id="gx-card" class="gx-card"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gx-section" id="gx-social">
+    <h2>Social life: who shares a trap</h2>
+    <p class="gx-note">Getz's wooden traps could hold several voles at once, so two voles found in the same trap
+      on the same check were physically together. Prairie voles are famous for male–female pair bonds, while
+      meadow voles are usually described as solitary. Here the two species are side by side, with males in blue
+      and females in red.</p>
+    <div class="gx-controls">
+      <label>Habitat <select id="gx-s-hab"><option value="all">All</option><option value="alfalfa">Alfalfa</option>
+        <option value="bluegrass">Bluegrass</option><option value="tallgrass">Tallgrass prairie</option></select></label>
+      <label>Partner means <select id="gx-s-meas">
+        <option value="co">Caught together (same trap, same check)</option>
+        <option value="ov">Shared a trap (same session, any check)</option>
+      </select></label>
+    </div>
+
+    <h3 class="gx-h3">How often voles are caught with the opposite sex</h3>
+    <p class="gx-note">Share of animals each session found in the same trap, on the same check, as a vole of the
+      opposite sex, plotted against population density so that crowding alone can't explain the difference.</p>
+    <div class="gx-pair" id="gx-s-together"></div>
+
+    <h3 class="gx-h3">Who is in the trap together</h3>
+    <p class="gx-note">Traps holding exactly two voles of the same species. If voles entered traps at random, about
+      half of these pairs would be male + female (tick mark).</p>
+    <div id="gx-s-comp"></div>
+
+    <h3 class="gx-h3">How many partners</h3>
+    <p class="gx-note">Breeding animals in each session: how many different voles of the opposite sex they had as
+      partners (as chosen above).</p>
+    <div class="gx-pair" id="gx-s-partners"></div>
+
+    <h3 class="gx-h3">Heavier males, more females?</h3>
+    <p class="gx-note">Breeding males by body mass: share with at least one female partner in a session (solid) and
+      with two or more (dashed). Captures per session barely change with mass, so heavier males aren't simply
+      caught more often.</p>
+    <div class="gx-pair" id="gx-s-mass"></div>
+
+    <h3 class="gx-h3">Do pairs stay together?</h3>
+    <p class="gx-note">Male–female pairs where both animals were caught again the next month: how often they were
+      caught together again. They are compared with neighbors (pairs that shared a trap but weren't caught
+      together) and with any male–female pair on the same grid.</p>
+    <div id="gx-s-fid"></div>
+  </section>
+
+  <section class="gx-section" id="gx-traps">
+    <h2>Coming back to the trap</h2>
+    <p class="gx-note">Being live-trapped should be stressful, so you might expect voles to learn to avoid traps.
+      They didn't. They came back to the same traps, and were caught more often, not less, as they gained
+      experience. Small-mammal trappers call this being "trap-happy"; a dry wooden box with cracked corn
+      inside is a good deal for a vole. Only grids with exact station layouts are used here.</p>
+    <div class="gx-controls">
+      <label>Species <select id="gx-t-sp"><option value="MO">Prairie vole</option><option value="MP">Meadow vole</option></select></label>
+      <label>Habitat <select id="gx-t-hab"><option value="all">All</option><option value="alfalfa">Alfalfa</option>
+        <option value="bluegrass">Bluegrass</option><option value="tallgrass">Tallgrass prairie</option></select></label>
+    </div>
+    <div class="gx-mass-grid">
+      <div>
+        <h3 class="gx-h3">Where the next capture happens</h3>
+        <p class="gx-note">Distance from each capture to the same animal's previous capture.</p>
+        <div id="gx-t-within"></div>
+        <div id="gx-t-next"></div>
+      </div>
+      <div>
+        <h3 class="gx-h3">Do they learn to avoid traps?</h3>
+        <p class="gx-note" id="gx-t-cohort">The same animals followed through their first five months of being
+          caught: average captures per three-day session.</p>
+        <div id="gx-t-caps"></div>
+        <h3 class="gx-h3 gx-h3-sub">Back in last month's trap</h3>
+        <p class="gx-note">Share of months in which an animal's first capture was in the same trap as its last
+          capture the month before.</p>
+        <div id="gx-t-same"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gx-section" id="gx-cal">
+    <h2>Breeding calendar</h2>
+    <p class="gx-note">Each cell is one month on the unmanipulated grids: the share of females caught that were
+      pregnant (judged by palpation), and the share of males in breeding condition (testes descended). Blank cells
+      had fewer than five animals of that sex.</p>
+    <div class="gx-controls">
+      <label>Species <select id="gx-c-sp"><option value="MO">Prairie vole</option><option value="MP">Meadow vole</option></select></label>
+      <label>Habitat <select id="gx-c-hab"><option value="all">All</option><option value="alfalfa">Alfalfa</option>
+        <option value="bluegrass">Bluegrass</option><option value="tallgrass">Tallgrass prairie</option></select></label>
+    </div>
+    <div class="gx-pair" id="gx-c-panels"></div>
+  </section>
+
+  <section class="gx-section" id="gx-mass">
+    <h2>Body mass</h2>
+    <p class="gx-note">Every capture on the monthly grids was weighed to the nearest gram. Each animal counts at
+      most once per session, using its average mass that session, so frequently trapped animals aren't
+      over-counted. These are descriptive summaries of the raw records, not fitted models.</p>
+    <div class="gx-controls">
+      <label>Species <select id="gx-m-sp"><option value="MO">Prairie vole</option><option value="MP">Meadow vole</option></select></label>
+      <label>Habitat <select id="gx-m-hab"><option value="all">All</option><option value="alfalfa">Alfalfa</option>
+        <option value="bluegrass">Bluegrass</option><option value="tallgrass">Tallgrass prairie</option></select></label>
+      <label>Sex <select id="gx-m-sex"><option value="0">Males vs. females</option><option value="1">Males only</option><option value="2">Females only</option></select></label>
+    </div>
+    <div class="gx-mass-grid">
+      <div>
+        <h3 class="gx-h3">Through the year</h3>
+        <p class="gx-note">Median mass by calendar month for males (blue) and females (red). Bands hold the
+          middle 50% of animals; with one sex selected, a lighter band adds the middle 80%.</p>
+        <div id="gx-season"></div>
+        <h3 class="gx-h3 gx-h3-sub">Share in breeding condition</h3>
+        <div id="gx-breed"></div>
+      </div>
+      <div>
+        <h3 class="gx-h3">By reproductive condition</h3>
+        <p class="gx-note">Distribution of mass for each condition recorded at capture: males with testes
+          descended or females with an open vulva count as reproductive, and pregnancy was judged by palpation.</p>
+        <div id="gx-repro"></div>
+      </div>
+    </div>
+    <h3 class="gx-h3">Growth after first capture</h3>
+    <div class="gx-controls gx-controls-inline">
+      <label>Show <select id="gx-m-juv"><option value="juv">Animals first weighed under 20 g</option>
+        <option value="all">All animals weighed in 3+ sessions</option></select></label>
+    </div>
+    <p class="gx-note">Each faint line is one animal's mass at each session after it was first weighed; bold lines
+      are the median for males (blue) and females (red). Animals that enter the grid small grow fast for about two
+      months and then level off.</p>
+    <div id="gx-growth"><canvas></canvas></div>
+  </section>
+
+  <section class="gx-section gx-about">
+    <h2>About the data</h2>
+    <details>
+      <summary>Trapping protocol in detail</summary>
+      <p>Each grid had one wooden multiple-capture live-trap per station, 10 m apart. Each month, traps were
+        prebaited with cracked corn for two days, then set in the afternoon and checked at about 08:00 and 15:00
+        on each of the next three days. Voles were toe-clipped at first capture for identification, and at
+        every capture the crew recorded species, animal number, station, sex, reproductive condition, and body
+        mass. Some grids were experimental: one species was removed every month, or the grid got supplemental
+        food (rabbit chow in a bottle at every station). The twice-weekly nest trapping (Alfalfa II–III, March
+        1982 to May 1987) put four or five traps around each known nest from 06:30 Monday to 09:30 Tuesday and
+        again Thursday to Friday. Getz estimated it caught more than 99% of the animals present.</p>
+    </details>
+    <details>
+      <summary>How this explorer processes the files</summary>
+      <ul>
+        <li>Source: Getz's 38 "original field trap records" files (one per species per grid), which he had
+          already cleaned, plus the two twice-weekly Alfalfa data files. The only further changes are noted below.</li>
+        <li>An <em>individual</em> is a species + grid + animal number. Getz re-used number sequences over the
+          years, so if the same number goes uncaught on a grid for more than 300 days, it is treated as a new
+          animal.</li>
+        <li>Nest captures are linked to a grid animal with the same number when they fall within 60 days of
+          that animal's grid captures. Recorded sex agrees for 95% of linked animals. Unlinked numbers become
+          "nest-only" animals, marked with an <i>n</i> in their ID.</li>
+        <li>Capture dates more than 30 days from the rest of their session (about 50 typos) are replaced with
+          the session's median date.</li>
+        <li>Density is the minimum number known alive. The 25-year means it gives match Getz et al. (2001):
+          bluegrass prairie voles 19.6/ha vs. 18 published, bluegrass meadow voles 13.5 vs. 14, tallgrass prairie
+          voles 8.0 vs. 8.</li>
+        <li>Animals taken off removal grids are counted in the totals but not drawn as lifelines.</li>
+        <li>Trap checks are coded morning (AM) or afternoon (PM). A third, undocumented code appears only in
+          Alfalfa II and III from 1982 to 1987, the years of the social-behavior study, whose grid sessions
+          added a 20:00 check. It is shown here as "Eve", probably that evening check.</li>
+        <li>Grid positions are rebuilt from Getz's station codes and scanned grid maps. Alfalfa and the
+          Phillips Tract grids are exact. The Trelease Prairie grid (an irregular L shape) and the BG Control
+          grid, which changed layout twice, are approximate.</li>
+      </ul>
+    </details>
+  </section>
+
+  <div class="gx-tip" id="gx-tip" role="tooltip"></div>
+</div>
+
+<script src="/projects/getz-vole-trapping/explorer.js?v=1794001676" defer></script>
+
+    </div>
+  </main>
+  <footer>
+  <div class="container">
+    <p>Caleb C. Vogt &copy; 2026</p>
+    <div class="social-links">
+      <a href="https://github.com/calebvogt">GitHub</a> |
+      <a href="https://www.youtube.com/@CalebVogtPhD">YouTube</a> |
+      <a href="https://scholar.google.com/citations?user=0NAwiPEAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0001-9315-3775">OrcID</a> |
+      <a href="https://www.linkedin.com/in/caleb-c-vogt/">LinkedIn</a>
+    </div>
+    <p class="site-updated">Site updated: 2026-11-06 14:47:56 MST</p>
+  </div>
+</footer>
+
+</body>
+</html>

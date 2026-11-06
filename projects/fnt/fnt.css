@@ -1,0 +1,59 @@
+/* FieldNeuroToolbox project page. Scoped under #fx; inherits the site's dark theme. */
+
+#fx { color: #c3c2b7; }
+#fx h1 { color: #fff; margin: 0 0 12px; font-size: 2.1em; font-weight: 400; }
+#fx h2 { color: #fff; font-weight: 400; margin: 0 0 6px; }
+#fx h3 { color: #fff; font-weight: 400; font-size: 1.05em; margin: 0 0 6px; }
+#fx a { color: #4a9eff; }
+
+.fx-kicker { color: #898781; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; margin: 0 0 6px; }
+.fx-lede { max-width: 780px; font-size: 1.05em; }
+.fx-byline { color: #898781; font-size: 14px; margin: 4px 0 0; }
+.fx-note { color: #898781; font-size: 13.5px; margin: 14px 0 0; max-width: 780px; }
+.fx-sub { color: #a9a79c; font-size: 14.5px; max-width: 780px; margin: 0 0 16px; line-height: 1.6; }
+.fx-footnote { color: #6f6d66; font-size: 12.5px; margin: 40px 0 0; }
+
+.fx-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; }
+.fx-btn { display: inline-block; padding: 8px 16px; border: 1px solid #333; border-radius: 6px; background: #111;
+  color: #e0e0e0 !important; font-size: 14px; text-decoration: none; transition: border-color 0.2s ease, background 0.2s ease; }
+.fx-btn:hover { border-color: #555; background: #161616; }
+.fx-btn-primary { background: #1d3a5f; border-color: #2f5a8f; color: #fff !important; }
+.fx-btn-primary:hover { background: #24497a; border-color: #4a9eff; }
+
+.fx-section { margin-top: 52px; }
+.fx-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.fx-card { background: #0d0d0d; border: 1px solid rgba(255, 255, 255, 0.10); border-radius: 10px; padding: 16px 18px; }
+.fx-card p { margin: 0; font-size: 14px; line-height: 1.55; color: #a9a79c; }
+
+.fx-figure { margin: 0 0 22px; }
+.fx-figure video, .fx-figure img { display: block; width: 100%; height: auto; border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.10); background: #000; }
+.fx-h3 { margin: 6px 0 10px !important; }
+.fx-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.fx-figure-app { margin-top: 18px; }
+.fx-figure-app video, .fx-figure-app img { max-width: 960px; }
+.fx-figure-small img { max-width: 620px; }
+.fx-figure-square video { max-width: 560px; }   /* near-square clips: keep them within a screen */
+.fx-figure figcaption { color: #898781; font-size: 13px; margin: 8px 0 0; max-width: 820px; line-height: 1.5; }
+
+.fx-steps { counter-reset: fx; list-style: none; padding: 0; margin: 4px 0 26px;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.fx-steps li { counter-increment: fx; background: #0d0d0d; border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 10px; padding: 14px 16px 14px; font-size: 14px; line-height: 1.55; color: #a9a79c; }
+.fx-steps li::before { content: counter(fx); display: block; color: #f2e14c; font-size: 1.4em; margin-bottom: 4px; }
+.fx-steps b { color: #fff; font-weight: 500; }
+
+.fx-list { padding-left: 18px; max-width: 820px; font-size: 14.5px; line-height: 1.6; }
+.fx-list li { margin-bottom: 8px; }
+.fx-list b { color: #fff; font-weight: 500; }
+.fx-list code, .fx-cite { font-family: Consolas, Menlo, monospace; }
+.fx-cite { background: #0d0d0d; border: 1px solid rgba(255, 255, 255, 0.10); border-radius: 8px; padding: 12px 16px;
+  font-size: 13px; color: #c3c2b7; overflow-x: auto; max-width: 820px; }
+
+@media (max-width: 860px) {
+  .fx-cards { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .fx-steps { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .fx-cards, .fx-steps, .fx-pair { grid-template-columns: minmax(0, 1fr); }
+}

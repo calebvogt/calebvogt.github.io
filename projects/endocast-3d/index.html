@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Endocasts in 3D | Caleb C. Vogt, PhD</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=1794001676">
+  <script src="/assets/js/page-transitions.js" defer></script>
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">
+      <img src="/assets/images/site/fieldNeuroRodent.png" alt="Logo" class="site-logo">
+      <div class="site-title-text">
+        <a href="/"><strong>Caleb C. Vogt, PhD</strong></a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/"><strong>Home</strong></a></li>
+        <li><a href="/publications"><strong>Publications</strong></a></li>
+        <li><a href="/projects"><strong>Projects</strong></a></li>
+        <li><a href="/gallery/"><strong>Gallery</strong></a></li>
+        <!-- <li><a href="/research"><strong>Research</strong></a></li> -->
+        <li><a href="/teaching/"><strong>Teaching</strong></a></li>
+        <!-- <li><a href="/posts"><strong>Posts</strong></a></li> -->
+        <li><a href="/resources"><strong>Resources</strong></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="header-spacer" aria-hidden="true"></div>
+<script src="/assets/js/site-header.js" defer></script>
+
+  
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <link rel="stylesheet" href="/projects/endocast-3d/endocast.css?v=1794001676">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+
+<div id="ec" data-base="/projects/endocast-3d/">
+
+  <a class="project-back" href="/projects">&larr; All projects</a>
+
+  <div class="ec-hero">
+    <p class="ec-kicker">University of Michigan · ANTHRBIO 474 Hominid Origins · 2015</p>
+    <h1>Endocasts in 3D</h1>
+    <p class="ec-lede">An endocast is a cast of the inside of a skull: the closest thing to a fossil brain.
+      For Milford Wolpoff's Hominid Origins course I laser-scanned five endocast casts from his lab, then
+      measured the casts, the scans, and 3D prints of the scans to see whether the copies are faithful enough
+      for real measurements. Mostly, they are. The scans are below. Turn them, and take them.</p>
+    <p class="ec-byline">By Caleb C. Vogt · page built with Claude Opus 5.5</p>
+    <div class="ec-stats">
+      <div class="ec-stat"><b>5</b><span>endocasts scanned</span></div>
+      <div class="ec-stat"><b>3</b><span>3D-printed</span></div>
+      <div class="ec-stat"><b>&lt;&thinsp;1.3%</b><span>length, width, height<br>(scanned + printed casts)</span></div>
+      <div class="ec-stat"><b>&lt;&thinsp;4%</b><span>volume</span></div>
+    </div>
+  </div>
+
+  <aside class="ec-credit ec-credit-top">
+    <p><strong>Thanks</strong> to Dr. John C. Mitani, who funded the scans when he didn't have to, and who
+      supported me throughout my undergraduate years; and to Dr. Aaron Sandel, for his support and his feedback
+      on the poster.</p>
+  </aside>
+
+  <section class="ec-section" id="ec-viewer">
+    <h2>The scans</h2>
+    <p class="ec-note">Drag to turn, scroll or pinch to zoom. These are lightened copies for the browser
+      (70,000 triangles); the downloads are the full scans.</p>
+    <div class="ec-picker" id="ec-picker" role="tablist" aria-label="Endocast"></div>
+    <div class="ec-stage">
+      <model-viewer id="ec-model" camera-controls auto-rotate auto-rotate-delay="0"
+        rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="1"
+        exposure="0.75" environment-image="neutral" touch-action="pan-y"
+        alt="3D scan of an endocast"></model-viewer>
+      <aside class="ec-card" id="ec-card" aria-live="polite"></aside>
+    </div>
+    <figure class="ec-lineup">
+      <img src="/projects/endocast-3d/tile.jpg" alt="The five endocasts side by side at the same scale" loading="lazy">
+      <figcaption>All five at the same scale: the unknown primate, the Taung Child, STS 60, Jebel Irhoud 2,
+        and La Quina 5.</figcaption>
+    </figure>
+  </section>
+
+  <section class="ec-section">
+    <h2>How it was done</h2>
+    <div class="ec-steps">
+      <div class="ec-step">
+        <b>1 · Measure the casts</b>
+        <p>Maximum length, width, and height of each cast with digital calipers, three times each, averaged.
+          Volume of the three smaller casts by how much brown rice each displaced in a graduated cylinder.</p>
+      </div>
+      <div class="ec-step">
+        <b>2 · Scan</b>
+        <p>Each cast was scanned with a handheld Creaform HandyScan 3D REVscan at the University of Michigan
+          3D Lab, and the passes stitched and cleaned up in Materialise 3-matic.</p>
+      </div>
+      <div class="ec-step">
+        <b>3 · Measure the scans</b>
+        <p>The same length, width, and height, taken on screen with 3D-Tool's measuring tool; volume straight
+          from the closed surface.</p>
+      </div>
+      <div class="ec-step">
+        <b>4 · Print and measure again</b>
+        <p>The Taung Child, STS 60, and the unknown primate were printed on a Dimension Elite (0.254&nbsp;mm
+          layers), measured with calipers, and their volume taken by water displacement.</p>
+      </div>
+    </div>
+    <div class="ec-photos">
+      <a href="/projects/endocast-3d/img/lab-casts.jpg"><img src="/projects/endocast-3d/img/lab-casts.jpg" alt="Endocast casts laid out on a table at the UM 3D Lab" loading="lazy"></a>
+      <a href="/projects/endocast-3d/img/scanner.jpg"><img src="/projects/endocast-3d/img/scanner.jpg" alt="The HandyScan 3D REVscan handheld laser scanner on its stand" loading="lazy"></a>
+      <a href="/projects/endocast-3d/img/scanner-in-hand.jpg"><img src="/projects/endocast-3d/img/scanner-in-hand.jpg" alt="Holding the scanner, with a scan building up on the laptop behind" loading="lazy"></a>
+      <a href="/projects/endocast-3d/img/scanner-live.jpg"><img src="/projects/endocast-3d/img/scanner-live.jpg" alt="The scanner and the live scan on screen" loading="lazy"></a>
+    </div>
+    <p class="ec-caption">The UM 3D Lab, spring 2015: casts waiting their turn, and the handheld laser scanner.</p>
+    <div class="ec-measures">
+      <a href="/projects/endocast-3d/img/measure/1_length.jpg"><img src="/projects/endocast-3d/img/measure/1_length.jpg" alt="Taung Child length measured on the scan" loading="lazy"></a>
+      <a href="/projects/endocast-3d/img/measure/2_width_a.jpg"><img src="/projects/endocast-3d/img/measure/2_width_a.jpg" alt="STS 60 width measured on the scan" loading="lazy"></a>
+      <a href="/projects/endocast-3d/img/measure/3_height_a.jpg"><img src="/projects/endocast-3d/img/measure/3_height_a.jpg" alt="La Quina 5 height measured on the scan" loading="lazy"></a>
+      <a href="/projects/endocast-3d/img/measure/4_length_a.jpg"><img src="/projects/endocast-3d/img/measure/4_length_a.jpg" alt="Jebel Irhoud 2 length measured on the scan" loading="lazy"></a>
+      <a href="/projects/endocast-3d/img/measure/5_height.jpg"><img src="/projects/endocast-3d/img/measure/5_height.jpg" alt="Unknown primate height measured on the scan" loading="lazy"></a>
+      <a href="/projects/endocast-3d/img/measure/5_width.jpg"><img src="/projects/endocast-3d/img/measure/5_width.jpg" alt="Unknown primate width measured on the scan" loading="lazy"></a>
+    </div>
+    <p class="ec-caption">Measuring the scans in 3D-Tool. Each labelled line is one of the three repeats.</p>
+  </section>
+
+  <section class="ec-section">
+    <h2>Did the copies measure like the casts?</h2>
+    <p class="ec-note">Difference from the cast, in percent: (copy − cast) / cast. The casts' own values are
+      the caliper averages; their volumes, rice displacement. The two large <i>Homo</i> casts were scanned but
+      not printed, and their volume was not measured by displacement.</p>
+    <div class="ec-table-wrap"><table class="ec-table" id="ec-table"></table></div>
+    <p class="ec-note">For the three casts that were both scanned and printed, every length, width, and height
+      agreed within 1.3%, and the prints were about as close as the scans. Volume came out within 4%, the loosest of
+      the measures, which says as much about rice and water in a graduated cylinder as about the scans. The
+      biggest gap overall was Jebel Irhoud 2's height, 4.7% taller on the scan than by calipers: on a large,
+      irregular cast, "maximum height" is easy to take from two slightly different places. So, for linear
+      measurements and with student-accessible equipment, a scan or a printed copy can stand in for a cast,
+      which matters because casts of these fossils are scarce, fragile, and expensive. Whether the scans are
+      fine enough to compare individual sulci on the brain's surface was left for another day.</p>
+  </section>
+
+  <section class="ec-section">
+    <h2>The poster</h2>
+    <a class="ec-poster" href="/projects/endocast-3d/img/poster.jpg"><img src="/projects/endocast-3d/img/poster.jpg" alt="Poster: Validation of a Novel Method in Paleoneurology: Endocast 3D Scanning and Printing" loading="lazy"></a>
+    <p class="ec-note">Presented at the end of the course in 2015.
+      <a href="/projects/endocast-3d/downloads/endocast-poster-vogt-2015.pdf">Download the PDF</a>. One correction: the poster
+      says every measurement fell within 1% error, but its own error chart is in fractions, not percent. The
+      table above has the actual figures.</p>
+  </section>
+
+  <section class="ec-section" id="ec-downloads">
+    <h2>Download the scans</h2>
+    <p class="ec-note">Full-resolution STL files, in millimetres, free to use under
+      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: print them, measure them, teach with
+      them. Please credit "Caleb C. Vogt (2015), endocast 3D scans". Each is a scan of a cast, not of the
+      original fossil, and is only as good as the cast.</p>
+    <ul class="ec-downloads" id="ec-dl"></ul>
+  </section>
+
+  <aside class="ec-credit">
+    <p><strong>Also thanks</strong> to Dr. Milford Wolpoff for the endocasts, to the staff of the University of
+      Michigan 3D Lab for the scanning and their patience, and to Kathleen Wang for her advice.</p>
+    <p><strong>How this page was made.</strong> The scans were converted for the browser and this page written
+      with <a href="https://www.anthropic.com/claude">Claude Opus 5.5</a> (Anthropic), working with Caleb Vogt,
+      from the original 2015 files.</p>
+  </aside>
+
+</div>
+
+<script src="/projects/endocast-3d/endocast.js?v=1794001676"></script>
+
+    </div>
+  </main>
+  <footer>
+  <div class="container">
+    <p>Caleb C. Vogt &copy; 2026</p>
+    <div class="social-links">
+      <a href="https://github.com/calebvogt">GitHub</a> |
+      <a href="https://www.youtube.com/@CalebVogtPhD">YouTube</a> |
+      <a href="https://scholar.google.com/citations?user=0NAwiPEAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0001-9315-3775">OrcID</a> |
+      <a href="https://www.linkedin.com/in/caleb-c-vogt/">LinkedIn</a>
+    </div>
+    <p class="site-updated">Site updated: 2026-11-06 14:47:56 MST</p>
+  </div>
+</footer>
+
+</body>
+</html>

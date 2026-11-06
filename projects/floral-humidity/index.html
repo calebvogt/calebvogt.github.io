@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking hawkmoths at humid flowers | Caleb C. Vogt, PhD</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=1794001676">
+  <script src="/assets/js/page-transitions.js" defer></script>
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">
+      <img src="/assets/images/site/fieldNeuroRodent.png" alt="Logo" class="site-logo">
+      <div class="site-title-text">
+        <a href="/"><strong>Caleb C. Vogt, PhD</strong></a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/"><strong>Home</strong></a></li>
+        <li><a href="/publications"><strong>Publications</strong></a></li>
+        <li><a href="/projects"><strong>Projects</strong></a></li>
+        <li><a href="/gallery/"><strong>Gallery</strong></a></li>
+        <!-- <li><a href="/research"><strong>Research</strong></a></li> -->
+        <li><a href="/teaching/"><strong>Teaching</strong></a></li>
+        <!-- <li><a href="/posts"><strong>Posts</strong></a></li> -->
+        <li><a href="/resources"><strong>Resources</strong></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="header-spacer" aria-hidden="true"></div>
+<script src="/assets/js/site-header.js" defer></script>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+
+      <article class="project-detail">
+        <a class="project-back" href="/projects">&larr; All projects</a>
+
+        <h1 class="project-detail-title">Tracking hawkmoths at humid flowers</h1>
+
+        <div class="project-detail-meta">
+          <span>2020–2022</span>
+          <span class="sep">·</span><span>Raguso Lab, Cornell</span>
+          <span class="sep">·</span><span class="role">Co-author: pose tracking and ROI analysis</span>
+        </div>
+
+        
+        <div class="project-tags project-detail-tags">
+          <span class="project-tag">Computer vision</span><span class="project-tag">SLEAP</span><span class="project-tag">SimBA</span><span class="project-tag">Pose estimation</span><span class="project-tag">Insect behavior</span>
+        </div>
+        
+
+        
+        <div class="project-links project-detail-links">
+          <a href="https://doi.org/10.1038/s41467-022-35353-8">Nature Communications (2022)</a>
+        </div>
+        
+        
+        <div class="project-detail-hero">
+          <video autoplay muted loop playsinline preload="metadata" poster="/projects/floral-humidity/tracking_clip_poster.jpg" aria-label="A hawkmoth probing an artificial flower, with its tracked skeleton and the regions of interest around both flowers">
+            <source src="/projects/floral-humidity/tracking_clip.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+
+        <p class="project-detail-summary">For Ajinkya Dahake's Nature Communications study of floral humidity, I tracked hawkmoths with SLEAP pose estimation and measured their visits to artificial flowers with SimBA's region-of-interest tool.</p>
+
+        <div class="project-detail-body">
+          <p>Ajinkya Dahake’s study asked whether the humidity that rises from a night-blooming
+flower (<em>Datura wrightii</em>) acts as a signal to its pollinator, the hawkmoth
+<em>Manduca sexta</em>. Part of the answer came from two-choice flight trials: a moth
+was offered two artificial flowers that differed only in their humidity, and
+an infrared camera filmed every visit. My contribution was turning those videos
+into measurements.</p>
+
+<h2 id="what-i-did">What I did</h2>
+
+<ul>
+  <li><strong>Pose tracking with <a href="https://sleap.ai">SLEAP</a>.</strong> I trained a SLEAP model to
+find six points on each moth: the eye, thorax, abdomen tip, both wingtips and
+the tip of the proboscis. The model was trained on 1,669 hand-labelled frames
+from 137 trial videos and then run on all of the trials.</li>
+  <li><strong><a href="https://github.com/sgoldenlab/simba">SimBA</a>’s region-of-interest tool.</strong> In
+each video I drew regions around the cup of each artificial flower and the
+space around it. From the tracked points, SimBA measured how long the
+proboscis tip stayed inside each flower (probing time) and how often the eye,
+which sits next to the moth’s humidity-sensing antennae, crossed each
+flower’s rim (floral entries).</li>
+</ul>
+
+<figure>
+  <img src="/projects/floral-humidity/sleap_skeleton.png" alt="The six-point moth skeleton in SLEAP" />
+  <figcaption>The six tracked points (eye, thorax, abdomen tip, left and right wingtips, proboscis tip) on a labelled frame in SLEAP.</figcaption>
+</figure>
+
+<p>The clip at the top is one tracked trial: the SLEAP skeleton on the moth (the
+proboscis tip in red, with a short trail), and the SimBA regions around each
+flower (inner ring: the flower’s cup; outer ring: the space around it).</p>
+
+<h2 id="the-paper">The paper</h2>
+
+<p>Dahake, A., Jain, P., <strong>Vogt, C.C.</strong>, Kandalaft, W., Stroock, A.D. &amp; Raguso, R.A.
+(2022). A signal-like role for floral humidity in a nocturnal pollination
+system. <em>Nature Communications</em>.
+<a href="https://doi.org/10.1038/s41467-022-35353-8">doi:10.1038/s41467-022-35353-8</a></p>
+
+<p>The paper covers much more than the tracking, including where the flowers’
+humidity comes from and how the moths sense it. Read it for the full story.</p>
+
+<p>Thank you to Ajinkya Dahake, a good friend from my graduate cohort, for bringing
+me onto this project.</p>
+
+        </div>
+      </article>
+
+    </div>
+  </main>
+  <footer>
+  <div class="container">
+    <p>Caleb C. Vogt &copy; 2026</p>
+    <div class="social-links">
+      <a href="https://github.com/calebvogt">GitHub</a> |
+      <a href="https://www.youtube.com/@CalebVogtPhD">YouTube</a> |
+      <a href="https://scholar.google.com/citations?user=0NAwiPEAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0001-9315-3775">OrcID</a> |
+      <a href="https://www.linkedin.com/in/caleb-c-vogt/">LinkedIn</a>
+    </div>
+    <p class="site-updated">Site updated: 2026-11-06 14:47:56 MST</p>
+  </div>
+</footer>
+
+</body>
+</html>

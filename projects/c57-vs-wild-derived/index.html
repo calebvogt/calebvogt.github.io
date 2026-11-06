@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C57BL/6J vs wild-derived mice in field enclosures | Caleb C. Vogt, PhD</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=1794001676">
+  <script src="/assets/js/page-transitions.js" defer></script>
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">
+      <img src="/assets/images/site/fieldNeuroRodent.png" alt="Logo" class="site-logo">
+      <div class="site-title-text">
+        <a href="/"><strong>Caleb C. Vogt, PhD</strong></a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/"><strong>Home</strong></a></li>
+        <li><a href="/publications"><strong>Publications</strong></a></li>
+        <li><a href="/projects"><strong>Projects</strong></a></li>
+        <li><a href="/gallery/"><strong>Gallery</strong></a></li>
+        <!-- <li><a href="/research"><strong>Research</strong></a></li> -->
+        <li><a href="/teaching/"><strong>Teaching</strong></a></li>
+        <!-- <li><a href="/posts"><strong>Posts</strong></a></li> -->
+        <li><a href="/resources"><strong>Resources</strong></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="header-spacer" aria-hidden="true"></div>
+<script src="/assets/js/site-header.js" defer></script>
+
+  
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <link rel="stylesheet" href="/projects/c57-vs-wild-derived/explorer.css?v=1794001676">
+
+<div id="cw" data-base="/projects/c57-vs-wild-derived/data/" data-paper="https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-024-01809-0">
+
+  <a class="project-back" href="/projects">&larr; All projects</a>
+
+  <div class="cw-hero">
+    <p class="cw-kicker">Liddell Field Research Station · Cornell University · Summer 2020</p>
+    <h1>C57BL/6J vs wild-derived mice in field enclosures</h1>
+    <p class="cw-lede">The C57BL/6J mouse is the most studied mammal in biomedicine. In the summer of 2020, at
+      Cornell's Liddell Field Research Station, we released replicate populations of 10 male and 10 female C57 mice
+      into large outdoor enclosures, alongside control populations of wild-derived (WD) outbred house mice raised in
+      the same lab, and tracked every animal's visits to eight resource zones by RFID for ten days. This page lets
+      you explore the published data directly, figure by figure.</p>
+    <p class="cw-byline">By Caleb C. Vogt, using Claude Opus 5.5</p>
+    <div class="cw-stats" id="cw-stats"></div>
+  </div>
+
+  <aside class="cw-credit">
+    <p><strong>The paper.</strong> Vogt CC, Zipple MN, Sprockett DD, Miller CH, Hardy SX, Arthur MK, Greenstein AM,
+      Colvin MS, Michel LM, Moeller AH, Sheehan MJ (2024). Female behavior drives the formation of distinct social
+      structures in C57BL/6J versus wild-derived outbred mice in field enclosures. <i>BMC Biology</i> 22: 35.
+      <a href="https://doi.org/10.1186/s12915-024-01809-0">doi:10.1186/s12915-024-01809-0</a>.
+      Preprint: <a href="https://doi.org/10.1101/2022.04.19.488643">bioRxiv 2022.04.19.488643</a>.</p>
+    <p><strong>Using these data.</strong> Everything here comes from the data deposited with the paper on Zenodo
+      (<a href="https://doi.org/10.5281/zenodo.7655040">10.5281/zenodo.7655040</a>; analysis code at
+      <a href="https://doi.org/10.5281/zenodo.10402900">10.5281/zenodo.10402900</a> and on
+      <a href="https://github.com/calebvogt/2024-Vogt-et-al.-BMCBiology">GitHub</a>). If you use them, please
+      cite the paper above.</p>
+  </aside>
+
+  <nav class="cw-toc" aria-label="On this page">
+    <a href="#cw-design">The experiment</a><a href="#cw-replay">Movement</a><a href="#cw-space">Space use</a><a
+      href="#cw-terr">Male territories</a><a href="#cw-social">Social structure</a><a href="#cw-notes">About the data</a>
+  </nav>
+
+  <section class="cw-section" id="cw-design">
+    <h2>The experiment</h2>
+    <p class="cw-note">Two enclosures (A and B), each 15.2&nbsp;×&nbsp;38.1&nbsp;m of open field, held eight
+      weather-proof resource zones, each with food, water and a single entrance tube (Fig 1, Fig S1). Every mouse
+      carried a PIT tag, and an RFID antenna underneath each resource zone recorded activity in the zone. Each trial
+      released 10 males and 10 females (one wild-derived trial had 9 males) into one enclosure for ten days; days
+      run noon to noon.</p>
+    <div class="cw-design">
+      <div class="cw-map-wrap"><svg id="cw-map" class="cw-svg" role="img" aria-label="Map of one enclosure: zones 1 and 2 at the bottom, 7 and 8 at the top"></svg></div>
+      <div class="cw-cal-wrap"><svg id="cw-calendar" class="cw-svg" role="img" aria-label="Trial calendar"></svg>
+        <div class="cw-legend" id="cw-cal-legend"></div></div>
+    </div>
+  </section>
+
+  <section class="cw-section" id="cw-replay">
+    <h2>Watch the mice move</h2>
+    <p class="cw-note">All seven trials play together, lined up by time since release. Each dot is one mouse, at the
+      zone where it was last detected: a filled dot's visit to that zone is still going on, a ring's last visit there
+      has ended. Lines trace the last eight hours of moves between zones. Click a trial to hide or show it.</p>
+    <div class="cw-player">
+      <button type="button" id="cw-play" aria-label="Play">&#9654;</button>
+      <input type="range" id="cw-time" min="0" max="1000" value="0" step="1" aria-label="Time since release">
+      <span class="cw-clock" id="cw-clock"></span>
+      <label>Speed <select id="cw-speed">
+        <option value="900">15 min / s</option>
+        <option value="3600" selected>1 h / s</option>
+        <option value="10800">3 h / s</option>
+        <option value="43200">12 h / s</option>
+      </select></label>
+      <label><input type="checkbox" id="cw-trails" checked> Trails</label>
+    </div>
+    <div class="cw-chips" id="cw-rp-trials" role="group" aria-label="Trials shown"></div>
+    <canvas id="cw-arenas" class="cw-canvas" aria-label="Animated map of the enclosures"></canvas>
+    <div class="cw-legend" id="cw-replay-legend"></div>
+  </section>
+
+  <section class="cw-section" id="cw-space">
+    <h2>Space use</h2>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Where each mouse went</h3>
+      <p class="cw-note">Each small map is one mouse on one day, its eight squares laid out like the enclosure (zones
+        1–2 at the bottom); colour is the number of RFID reads in that zone, on a log scale. Pick any C57 and any
+        wild-derived trial.</p>
+      <div class="cw-controls">
+        <div class="cw-seg" id="cw-hm-sex" role="group" aria-label="Sex">
+          <button type="button" data-v="F" aria-pressed="true">Females</button><button type="button" data-v="M" aria-pressed="false">Males</button>
+        </div>
+        <label>C57 trial <select id="cw-hm-c57"></select></label>
+        <label>Wild-derived trial <select id="cw-hm-wd"></select></label>
+      </div>
+      <div class="cw-pair">
+        <div><div class="cw-pair-h" id="cw-hm-c57-h"></div><svg id="cw-hm-c57-svg" class="cw-svg"></svg></div>
+        <div><div class="cw-pair-h" id="cw-hm-wd-h"></div><svg id="cw-hm-wd-svg" class="cw-svg"></svg></div>
+      </div>
+      <div class="cw-scale" id="cw-hm-scale"></div>
+      <p class="cw-fig" id="cw-hm-fig"></p>
+    </div>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Comparing the four groups</h3>
+      <p class="cw-note">Means ± SEM across mice, all trials pooled. Pick a measure for each chart; click a legend
+        entry to hide or show a group.</p>
+      <div class="cw-controls"><label><input type="checkbox" id="cw-sp-indiv"> Show each mouse</label></div>
+      <div class="cw-two cw-charts" id="cw-sp-pair"></div>
+      <div class="cw-legend" id="cw-sp-legend"></div>
+    </div>
+  </section>
+
+  <section class="cw-section" id="cw-terr">
+    <h2>Male territories</h2>
+    <p class="cw-note">Males of both kinds carved the enclosure into territories rather than forming one dominance
+      hierarchy, but C57 males took longer to settle it (Fig 2).</p>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Who held each zone</h3>
+      <p class="cw-note">Every trial at once: each small map is one day, each square one zone, coloured by the male
+        with the most reads there that day (one colour per male within a trial). Stronger colour means he made a
+        larger share of the zone's male reads. Hover for names.</p>
+      <svg id="cw-own" class="cw-svg"></svg>
+      <div class="cw-two cw-charts">
+        <div>
+          <h3 class="cw-h3">How completely the top male held his zone</h3>
+          <p class="cw-note">Share of each zone's male RFID reads made by its top male that day (Fig 2B).</p>
+          <svg id="cw-rank1" class="cw-svg"></svg>
+          <div class="cw-legend" id="cw-rank1-legend"></div>
+          <p class="cw-fig" id="cw-rank1-fig"></p>
+        </div>
+        <div>
+          <h3 class="cw-h3">Winning at home</h3>
+          <p class="cw-note">Territory holders' win rate in displacements at their own zones and away from them.
+            Each line is one male (Fig 2E).</p>
+          <svg id="cw-win" class="cw-svg"></svg>
+          <p class="cw-fig" id="cw-win-fig"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Priority access</h3>
+      <p class="cw-note">Each day a mouse scores its share of same-sex time at every zone it visited, minus one if it
+        held a majority at none of them; the priority access score is the running total. A male that held one zone
+        all trial ends near +10. By day 10, males had split into territory holders and the rest; females had not.</p>
+      <div class="cw-math" role="group" aria-label="Priority access score formulas, from the paper's Methods">
+        <math display="block">
+          <msub><mtext>Occupancy</mtext><mrow><mi>M</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>z</mi></mrow></msub>
+          <mo>=</mo>
+          <mfrac>
+            <msub><mtext>time</mtext><mrow><mi>M</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>z</mi></mrow></msub>
+            <mrow><munder><mo>&#8721;</mo><mrow><mi>m</mi><mo>&#8712;</mo><msub><mi>S</mi><mi>M</mi></msub></mrow></munder><msub><mtext>time</mtext><mrow><mi>m</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>z</mi></mrow></msub></mrow>
+          </mfrac>
+        </math>
+        <math display="block">
+          <msub><mtext>Capture Score</mtext><mrow><mi>M</mi><mo>,</mo><mi>D</mi></mrow></msub>
+          <mo>=</mo>
+          <mrow>
+            <mo stretchy="true">{</mo>
+            <mtable>
+              <mtr>
+                <mtd><munderover><mo>&#8721;</mo><mrow><mi>z</mi><mo>=</mo><mn>1</mn></mrow><mn>8</mn></munderover><msub><mtext>Occupancy</mtext><mrow><mi>M</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>z</mi></mrow></msub></mtd>
+                <mtd><mtext>if&#160;</mtext><mo>&#8707;</mo><mi>z</mi><mo>&#8712;</mo><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mo>&#8230;</mo><mo>,</mo><mn>8</mn><mo stretchy="false">}</mo><mo>:</mo><msub><mtext>Occupancy</mtext><mrow><mi>M</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>z</mi></mrow></msub><mo>&gt;</mo><mn>0.5</mn></mtd>
+              </mtr>
+              <mtr>
+                <mtd><munderover><mo>&#8721;</mo><mrow><mi>z</mi><mo>=</mo><mn>1</mn></mrow><mn>8</mn></munderover><msub><mtext>Occupancy</mtext><mrow><mi>M</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>z</mi></mrow></msub><mo>&#8722;</mo><mn>1</mn></mtd>
+                <mtd><mtext>otherwise</mtext></mtd>
+              </mtr>
+            </mtable>
+          </mrow>
+        </math>
+        <math display="block">
+          <msub><mtext>PAS</mtext><mrow><mi>M</mi><mo>,</mo><mi>D</mi></mrow></msub>
+          <mo>=</mo>
+          <munderover><mo>&#8721;</mo><mrow><mi>d</mi><mo>=</mo><mn>1</mn></mrow><mi>D</mi></munderover>
+          <msub><mtext>Capture Score</mtext><mrow><mi>M</mi><mo>,</mo><mi>d</mi></mrow></msub>
+        </math>
+        <p class="cw-math-key">After the paper's Methods, which give the first two equations and describe the third
+          in words. <i>M</i>: a mouse; <i>D</i>, <i>d</i>: a day; <i>z</i>: a resource zone; time: the mouse's time
+          in the zone that day, from its RFID-defined visits; <i>S<sub>M</sub></i>: the mice of <i>M</i>'s sex in the
+          trial (usually 10). Occupancy is 0 for a zone the mouse did not visit, so a day without visits scores
+          &#8722;1. Example from the paper: if male A spends 4&nbsp;h a day in a zone that only male B also visits,
+          for 1&nbsp;h a day, A scores 0.8 each day and B 0.2&nbsp;&#8722;&nbsp;1 =&nbsp;&#8722;0.8.</p>
+      </div>
+      <div class="cw-controls">
+        <div class="cw-seg" id="cw-pas-sex" role="group" aria-label="Sex">
+          <button type="button" data-v="M" aria-pressed="true">Males</button><button type="button" data-v="F" aria-pressed="false">Females</button>
+        </div>
+      </div>
+      <div class="cw-two">
+        <svg id="cw-pas-lines" class="cw-svg"></svg>
+        <svg id="cw-pas-density" class="cw-svg"></svg>
+      </div>
+      <div class="cw-legend" id="cw-pas-legend"></div>
+      <p class="cw-fig" id="cw-pas-fig"></p>
+    </div>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Territory holders and the rest</h3>
+      <p class="cw-note">Males split by whether their priority access score ended day 10 above zero. Holders
+        spent far more time with females; the rest kept moving between zones.</p>
+      <div class="cw-two cw-charts">
+        <div>
+          <div class="cw-pair-h">Cumulative time with females</div>
+          <svg id="cw-fm" class="cw-svg"></svg>
+          <div class="cw-legend" id="cw-fm-legend"></div>
+          <p class="cw-fig" id="cw-fm-fig"></p>
+        </div>
+        <div>
+          <div class="cw-pair-h">Zones visited each day</div>
+          <svg id="cw-s2f" class="cw-svg"></svg>
+          <div class="cw-legend" id="cw-s2f-legend"></div>
+          <p class="cw-fig" id="cw-s2f-fig"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Encounters between pairs of mice</h3>
+      <p class="cw-note">Every time two mice shared a zone, by when it happened in the trial and how long it lasted.
+        C57 males spent long stretches together in the first days before their encounters became brief and rare;
+        wild-derived males got there within a day.</p>
+      <div class="cw-controls">
+        <label>Pairs <select id="cw-dy-type">
+          <option value="MM">Male–male</option>
+          <option value="FM">Female–male</option>
+          <option value="FF">Female–female</option>
+        </select></label>
+        <div class="cw-seg" id="cw-dy-view" role="group" aria-label="View">
+          <button type="button" data-v="dur" aria-pressed="true">Durations</button><button type="button" data-v="freq" aria-pressed="false">Encounters per day</button>
+        </div>
+      </div>
+      <canvas id="cw-dy-canvas" class="cw-canvas"></canvas>
+      <svg id="cw-dy-freq" class="cw-svg" hidden></svg>
+      <div class="cw-legend" id="cw-dy-legend"></div>
+      <p class="cw-fig" id="cw-dy-fig"></p>
+    </div>
+  </section>
+
+  <section class="cw-section" id="cw-social">
+    <h2>Social structure</h2>
+    <p class="cw-note">Mice that were in the same zone at the same time are counted as together (Fig S1F).</p>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Who was together</h3>
+      <p class="cw-note">Hours per trial spent in each group make-up, by the number of males and females present
+        (Fig 4A).</p>
+      <div class="cw-pair">
+        <div><div class="cw-pair-h">C57BL/6J</div><svg id="cw-comp-C57" class="cw-svg"></svg></div>
+        <div><div class="cw-pair-h">Wild-derived</div><svg id="cw-comp-WD" class="cw-svg"></svg></div>
+      </div>
+      <div class="cw-scale" id="cw-comp-scale"></div>
+      <p class="cw-fig" id="cw-comp-fig"></p>
+    </div>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Time alone and with others</h3>
+      <div class="cw-controls"><label><input type="checkbox" id="cw-tb-indiv"> Show each mouse</label></div>
+      <div class="cw-two cw-charts" id="cw-tb-pair"></div>
+      <div class="cw-legend" id="cw-tb-legend"></div>
+    </div>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Cagemates</h3>
+      <p class="cw-note">Each female shared her trial with sisters from her lab cage (cagemates). Preference is the
+        share of a female's time with other females that she spent with cagemates, minus the share expected by
+        chance from how many cagemates and other females were present that day (Fig 3D).</p>
+      <div class="cw-two cw-charts" id="cw-cm-pair"></div>
+      <div class="cw-legend" id="cw-cm-legend"></div>
+    </div>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Networks in motion</h3>
+      <p class="cw-note">Each network is built from a window that slides through the trial an hour at a time: links
+        join mice that shared zones within the window, thicker for a higher association index (simple ratio index).
+        Each frame starts from the previous frame's layout and relaxes it (Fruchterman–Reingold), so mice drift
+        together and apart as their associations change. Circles grow with the number of partners; faint rings
+        have no partners in the window. Outlines mark groups found by Louvain community detection.</p>
+      <div class="cw-player">
+        <button type="button" id="cw-nw-play" aria-label="Play">&#9654;</button>
+        <input type="range" id="cw-nw-time" min="0" max="1000" value="0" step="1" aria-label="Time since release">
+        <span class="cw-clock" id="cw-nw-clock"></span>
+        <label>Window <select id="cw-nw-window">
+          <option value="6" selected>6 h</option>
+          <option value="12">12 h</option>
+          <option value="24">24 h</option>
+        </select></label>
+        <label>Speed <select id="cw-nw-speed">
+          <option value="2">2 h / s</option>
+          <option value="6" selected>6 h / s</option>
+          <option value="12">12 h / s</option>
+        </select></label>
+        <label><input type="checkbox" id="cw-nw-groups" checked> Groups</label>
+      </div>
+      <div class="cw-pair">
+        <div><div class="cw-arena-head"><select id="cw-nw-c57" aria-label="C57 trial"></select></div>
+          <canvas id="cw-nw-cv-c57" class="cw-canvas"></canvas></div>
+        <div><div class="cw-arena-head"><select id="cw-nw-wd" aria-label="Wild-derived trial"></select></div>
+          <canvas id="cw-nw-cv-wd" class="cw-canvas"></canvas></div>
+      </div>
+      <div class="cw-legend" id="cw-nw-legend"></div>
+    </div>
+
+    <div class="cw-card">
+      <h3 class="cw-h3">Network structure, day by day</h3>
+      <p class="cw-note">Daily networks (noon to noon), as analysed in the paper. Means ± SEM across trials.</p>
+      <div class="cw-controls"><label><input type="checkbox" id="cw-ns-indiv"> Show each trial</label></div>
+      <div class="cw-two cw-charts" id="cw-ns-pair"></div>
+      <div class="cw-legend" id="cw-ns-legend"></div>
+      <h3 class="cw-h3">Each mouse's place in the network</h3>
+      <div class="cw-controls"><label><input type="checkbox" id="cw-nd-indiv"> Show each mouse</label></div>
+      <div class="cw-two cw-charts" id="cw-nd-pair"></div>
+      <div class="cw-legend" id="cw-nd-legend"></div>
+    </div>
+  </section>
+
+  <section class="cw-section" id="cw-notes">
+    <h2>About the data</h2>
+    <ul class="cw-notes-list">
+      <li>All numbers come from the tables deposited with the paper, cut at noon on day 10. In two trials (T006 and
+        T007) the mice stayed in the field beyond ten days; those later data are not part of the paper and are not
+        shown.</li>
+      <li>Charts follow the paper's own analysis scripts, including which mice were excluded on which days, and
+        reproduce the published panels except where noted below. Daily network measures are the published values;
+        the sliding-window networks are rebuilt from the deposited group-by-individual tables with the same
+        association index (rebuilt daily networks reproduce the published degree and strength of every mouse on
+        every day).</li>
+      <li><b>Durations.</b> In the deposited movement-bout table, 185 bouts on 27 mouse-days record their duration
+        in minutes rather than seconds, a quirk of how R chooses time units. Here they are converted back to
+        seconds, which raises the tracked total from the paper's <span id="cw-hours-dep"></span>&nbsp;h to
+        <span id="cw-hours"></span>&nbsp;h (+1.1%). It nudges the priority access scores (Figs 2D, S3B–C; two
+        females' day-10 scores cross zero) and time in the most used zone (Figs S2B, S3E; group means by at most
+        0.1 points). No result changes.</li>
+      <li><b>New mice met (Fig S4C).</b> The original script dated each pair's first meeting by the first matching
+        row of a table sorted by zone rather than time, so the published curves for days 1–9 run low (C57
+        females on day 2: 4.5 published, 8.8 corrected). The corrected values are shown; day 10, which the
+        paper's statistics used, is unchanged.</li>
+      <li><b>Male–male encounters per day (Fig S2C).</b> The published means skipped trial-days with no
+        encounters (wild-derived days 4, 6 and 8); those zeros are included here.</li>
+      <li><b>Time with females (Fig 2F).</b> Reproduces the published panel, in which a male counts from his
+        first day with females and carries his total over a day without data. The deposited script differs
+        slightly (wild-derived territory holders on day 10: 603 instead of 574 min).</li>
+      <li>Times are local (EDT). A dot's position within a zone is only for display; the data say which zone, not
+        where in it.</li>
+    </ul>
+  </section>
+
+  <aside class="cw-credit">
+    <p><strong>How this page was made.</strong> The data processing and visualizations were built with
+      <a href="https://www.anthropic.com/claude">Claude Opus 5.5</a> (Anthropic), working with Caleb Vogt and his
+      original R and Python analysis code, from the tables deposited with the paper. Any errors in processing or
+      display are Caleb Vogt's, not his co-authors'.</p>
+  </aside>
+
+  <div class="cw-tip" id="cw-tip" role="tooltip"></div>
+</div>
+
+<script src="/projects/c57-vs-wild-derived/explorer.js?v=1794001676"></script>
+
+    </div>
+  </main>
+  <footer>
+  <div class="container">
+    <p>Caleb C. Vogt &copy; 2026</p>
+    <div class="social-links">
+      <a href="https://github.com/calebvogt">GitHub</a> |
+      <a href="https://www.youtube.com/@CalebVogtPhD">YouTube</a> |
+      <a href="https://scholar.google.com/citations?user=0NAwiPEAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0001-9315-3775">OrcID</a> |
+      <a href="https://www.linkedin.com/in/caleb-c-vogt/">LinkedIn</a>
+    </div>
+    <p class="site-updated">Site updated: 2026-11-06 14:47:56 MST</p>
+  </div>
+</footer>
+
+</body>
+</html>

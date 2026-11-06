@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FieldNeuroToolbox (FNT) | Caleb C. Vogt, PhD</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=1794001676">
+  <script src="/assets/js/page-transitions.js" defer></script>
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">
+      <img src="/assets/images/site/fieldNeuroRodent.png" alt="Logo" class="site-logo">
+      <div class="site-title-text">
+        <a href="/"><strong>Caleb C. Vogt, PhD</strong></a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/"><strong>Home</strong></a></li>
+        <li><a href="/publications"><strong>Publications</strong></a></li>
+        <li><a href="/projects"><strong>Projects</strong></a></li>
+        <li><a href="/gallery/"><strong>Gallery</strong></a></li>
+        <!-- <li><a href="/research"><strong>Research</strong></a></li> -->
+        <li><a href="/teaching/"><strong>Teaching</strong></a></li>
+        <!-- <li><a href="/posts"><strong>Posts</strong></a></li> -->
+        <li><a href="/resources"><strong>Resources</strong></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="header-spacer" aria-hidden="true"></div>
+<script src="/assets/js/site-header.js" defer></script>
+
+  
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <link rel="stylesheet" href="/projects/fnt/fnt.css?v=1794001676">
+
+<div id="fx">
+
+  <a class="project-back" href="/projects">&larr; All projects</a>
+
+  <p class="fx-kicker">Open-source software · 2025–present</p>
+  <h1>FieldNeuroToolbox (FNT)</h1>
+  <p class="fx-lede">FieldNeuroToolbox (FNT) is free, open-source software for working with field
+    neuroethology data. It brings tools for audio, video, animal tracking, RFID, ultra-wideband positioning,
+    fiber photometry and imaging together in one desktop app. FNT runs on an ordinary laptop (Windows, macOS
+    or Linux, with no Python installation needed), so the work can travel with the research, including to
+    field sites far from any lab.</p>
+  <p class="fx-byline">By Caleb C. Vogt · Donaldson Lab, University of Colorado Boulder</p>
+
+  <div class="fx-actions">
+    <a class="fx-btn fx-btn-primary" href="https://github.com/calebvogt/fnt">Code on GitHub</a>
+    <a class="fx-btn" href="https://calebvogt.github.io/fnt/">Documentation</a>
+    <a class="fx-btn" href="https://github.com/calebvogt/fnt/releases/latest">Download the app</a>
+    <a class="fx-btn" href="https://youtube.com/playlist?list=PLY8yLegR_viXsARZr460L3ZHRp3HZsOOC">Video tutorials</a>
+  </div>
+  <p class="fx-note">FNT is in active development. A manuscript describing it is in preparation; until it is out,
+    please cite the repository.</p>
+
+  <section class="fx-section">
+    <h2>What's inside</h2>
+    <p class="fx-sub">Graphical tools for the data types common in field and laboratory neuroethology.</p>
+    <div class="fx-cards">
+      <div class="fx-card"><h3>Video processing</h3>
+        <p>Preprocessing and re-encoding, trimming and cropping, joining recordings, and multi-camera grid
+          videos for scoring.</p></div>
+      <div class="fx-card"><h3>Video tracking and scoring</h3>
+        <p>A fast classical tracker, the Segment Anything&ndash;based Mask Tracker, ROI occupancy, SLEAP
+          utilities and the Behavior Scoring Studio.</p></div>
+      <div class="fx-card"><h3>Audio and ultrasonic vocalizations</h3>
+        <p>Detect, review and classify vocalizations in long recordings, including the Mask Audio Detector
+          featured below.</p></div>
+      <div class="fx-card"><h3>Ultra-wideband tracking</h3>
+        <p>Preprocessing of ultra-wideband positional data and proximity analysis.</p></div>
+      <div class="fx-card"><h3>RFID tracking</h3>
+        <p>From reader downloads to cleaned reads, visits, zone holders and co-occupancy, with quality-control
+          reports.</p></div>
+      <div class="fx-card"><h3>Feeding devices</h3>
+        <p>A module for FED3 feeding experimentation devices.</p></div>
+      <div class="fx-card"><h3>Imaging</h3>
+        <p>Viewing and processing Zeiss CZI microscopy images, and cell quantification.</p></div>
+      <div class="fx-card"><h3>Fiber photometry</h3>
+        <p>Batch processing of Doric wireless fiber photometry recordings: &Delta;F/F, video sync and export.</p></div>
+    </div>
+    <figure class="fx-figure fx-figure-app">
+      <video class="fx-loop" autoplay muted loop playsinline preload="metadata" poster="/projects/fnt/fnt_main_audio.png"
+        aria-label="The FNT app stepping through its tool tabs">
+        <source src="/projects/fnt/fnt_tabs.mp4" type="video/mp4">
+      </video>
+      <figcaption>The FNT app: every tool opens from one window, grouped by data type.</figcaption>
+    </figure>
+  </section>
+
+  <section class="fx-section" id="fx-video">
+    <h2>Video</h2>
+    <p class="fx-sub">Tools for the everyday work on behavioral video: preprocessing and re-encoding, trimming and
+      cropping, joining recordings, and combining synchronized cameras into one grid video for scoring. For
+      tracking there is a fast classical tracker and the Mask Tracker, which uses the Segment Anything Model to
+      annotate animals, trains an instance-segmentation model and tracks with it; an ROI tool turns those tracks,
+      or SLEAP's, into time spent in each region. The Behavior Scoring Studio handles manual annotation with an
+      ethogram, a timeline and video playback.</p>
+    <figure class="fx-figure fx-figure-app">
+      <img src="/projects/fnt/fnt_main_video.png" alt="The FNT app's Video tab, listing its processing, tracking, SLEAP and behavior scoring tools" loading="lazy">
+      <figcaption>The Video tab.</figcaption>
+    </figure>
+    <div class="fx-pair">
+      <figure class="fx-figure">
+        <img src="/projects/fnt/fnt_video_scoring.png" alt="Behavior Scoring Studio: numbered setup steps beside the video pane, a timeline and a table of scored events" loading="lazy">
+        <figcaption>Behavior Scoring Studio: set up subjects and an ethogram, score with key presses while the video
+          plays, and export every event.</figcaption>
+      </figure>
+      <figure class="fx-figure">
+        <img src="/projects/fnt/fnt_video_preprocessing.png" alt="Video PreProcessing: batch options for frame rate, output format, grayscale, audio and timestamps" loading="lazy">
+        <figcaption>Video PreProcessing: batch re-encoding of whole folders, with frame-rate, format, grayscale,
+          audio and timestamp options.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="fx-section" id="fx-mask-tracker">
+    <h2>Video: the Mask Tracker</h2>
+    <p class="fx-sub">The Mask Tracker outlines every animal in a frame, pixel by pixel, and learns to do it on
+      its own: you label frames with the help of the Segment Anything Model, it trains an
+      instance-segmentation network on them, and the network then finds the animals in new frames and video.
+      It follows the same label, train and review loop as MAD.</p>
+    <figure class="fx-figure fx-figure-square">
+      <video class="fx-loop" autoplay muted loop playsinline preload="metadata" poster="/projects/fnt/mtt_label_poster.jpg" aria-label="Labeling five rodents in the Mask Tracker with one click each">
+        <source src="/projects/fnt/mtt_label.mp4" type="video/mp4">
+      </video>
+      <figcaption>Labeling with the Segment Anything Model: one click on each animal and its outline appears; Enter
+        saves each one as its own mask. Five rodents in one corner of an indoor enclosure, filmed from above under
+        infrared light.</figcaption>
+    </figure>
+    <ol class="fx-steps">
+      <li><b>Label.</b> Click an animal and the Segment Anything Model outlines it; a click near the outline adds
+        a missed tail or foot, a right-click removes a spot, and a brush and eraser fix the rest. Animals that
+        touch stay separate masks.</li>
+      <li><b>Train.</b> The labeled frames, and frames marked as holding no animal, train an
+        instance-segmentation network (YOLO11-seg). A training window shows, after every epoch, the network's
+        masks over yours on held-out frames, with their overlap score.</li>
+      <li><b>Predict.</b> The network outlines the animals in new frames and tracks them through videos.</li>
+      <li><b>Review.</b> Accept, reject or reshape each predicted mask; every decision becomes training data for
+        the next round.</li>
+    </ol>
+    <h3 class="fx-h3">In the app</h3>
+    <figure class="fx-figure">
+      <img src="/projects/fnt/mtt_window.webp" alt="The Mask Tracker window: a queue of training frames, review and labeling tools on the left, and a frame with five outlined animals on the right" loading="lazy">
+      <figcaption>The Mask Tracker: the queue of frames to label, the review and labeling tools, and a labeled frame
+        with each animal's mask outlined.</figcaption>
+    </figure>
+  </section>
+
+  <section class="fx-section" id="fx-audio">
+    <h2>Audio: the Mask Audio Detector (MAD)</h2>
+    <p class="fx-sub">Many rodents call to each other at frequencies far above human hearing, and a
+      single experiment can produce weeks of recordings. MAD finds those calls with a deep-learning model that
+      learns from examples you draw directly on the spectrogram.</p>
+    <figure class="fx-figure">
+      <video controls playsinline preload="metadata" poster="/projects/fnt/mad_clip_poster.jpg">
+        <source src="/projects/fnt/mad_clip.mp4" type="video/mp4">
+      </video>
+      <figcaption>About one second of rodent ultrasonic vocalizations, with each call MAD detected outlined in
+        yellow. The audio is slowed 16 times, which brings the calls down into the range of human hearing.
+        Turn the sound on.</figcaption>
+    </figure>
+    <figure class="fx-figure">
+      <video controls playsinline preload="metadata" poster="/projects/fnt/mad_clip_het_poster.jpg">
+        <source src="/projects/fnt/mad_clip_het.mp4" type="video/mp4">
+      </video>
+      <figcaption>Eleven seconds of rodent ultrasonic vocalizations, in real time. Here the audio is heterodyned
+        instead of slowed: every frequency is shifted down by 20 kHz, the way a bat detector does it, so you
+        hear the bout at its true pace. Turn the sound on.</figcaption>
+    </figure>
+    <ol class="fx-steps">
+      <li><b>Label.</b> Click a call on the spectrogram and the Segment Anything Model proposes its outline; a
+        brush and eraser refine it.</li>
+      <li><b>Train.</b> Confirmed calls train a segmentation network (U-Net) that marks every pixel belonging to
+        a call.</li>
+      <li><b>Detect.</b> The trained model runs across whole recordings (fastest on a GPU), from the app or the
+        command line.</li>
+      <li><b>Review.</b> Accept or reject each detection in the app; every decision becomes new training data
+        for the next round.</li>
+    </ol>
+    <h3 class="fx-h3">In the app</h3>
+    <figure class="fx-figure">
+      <img src="/projects/fnt/mad_window.webp" alt="The MAD window: a spectrogram with detected calls outlined, the recording list and a table of detections" loading="lazy">
+      <figcaption>MAD's review window: the spectrogram with every detected call outlined, the recordings on the
+        left and a table of detections to accept or reject.</figcaption>
+    </figure>
+    <figure class="fx-figure">
+      <video class="fx-loop" autoplay muted loop playsinline preload="metadata" aria-label="Scrolling through a recording in MAD">
+        <source src="/projects/fnt/mad_scroll.mp4" type="video/mp4">
+      </video>
+      <figcaption>Scrolling through a few seconds of a recording in MAD, detections outlined as they pass.</figcaption>
+    </figure>
+  </section>
+
+  <section class="fx-section" id="fx-uwb">
+    <h2>Ultra-wideband tracking</h2>
+    <p class="fx-sub">Ultra-wideband tags give a continuous position for every animal. FNT's UWB preprocessing
+      tool cleans and exports those tracks and measures how close animals come to one another.</p>
+    <figure class="fx-figure fx-figure-app fx-figure-small">
+      <img src="/projects/fnt/fnt_main_uwb.png" alt="The FNT app's UWB tab" loading="lazy">
+      <figcaption>The UWB tab.</figcaption>
+    </figure>
+  </section>
+
+  <section class="fx-section">
+    <h2>Get FNT</h2>
+    <ul class="fx-list">
+      <li><b>Desktop app.</b> Download the latest release for Windows, macOS or Linux from
+        <a href="https://github.com/calebvogt/fnt/releases/latest">GitHub Releases</a>, unzip it and run
+        <code>fnt</code>. Video tools also need <a href="https://ffmpeg.org/download.html">ffmpeg</a>.</li>
+      <li><b>From source.</b> Install the Python package to modify the code or script the tools; see the
+        <a href="https://calebvogt.github.io/fnt/installation/">installation guide</a>.</li>
+      <li><b>Documentation.</b> How each tool works, step by step, at
+        <a href="https://calebvogt.github.io/fnt/">calebvogt.github.io/fnt</a>.</li>
+      <li><b>Questions and requests.</b> Please <a href="https://github.com/calebvogt/fnt/issues">open an
+        issue</a> for bugs or features.</li>
+      <li><b>License.</b> GNU Affero General Public License v3.0 or later.</li>
+    </ul>
+    <p class="fx-sub">If FNT helps your research, please cite the repository:</p>
+    <pre class="fx-cite">@software{fnt,
+  title  = {FieldNeuroToolbox (FNT)},
+  author = {Vogt, Caleb C. and Garmany, Samuel and Lorman, Sophia G. and Donaldson, Zoe R.},
+  url    = {https://github.com/calebvogt/fnt}
+}</pre>
+  </section>
+
+  <script>
+    // Visitors who prefer reduced motion get the looping clips paused, with controls.
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('#fx video.fx-loop').forEach(function (v) {
+        v.removeAttribute('autoplay'); v.pause(); v.controls = true;
+      });
+    }
+  </script>
+
+  <p class="fx-footnote">Recordings shown are rodent ultrasonic vocalizations from ongoing, unpublished work.</p>
+</div>
+
+    </div>
+  </main>
+  <footer>
+  <div class="container">
+    <p>Caleb C. Vogt &copy; 2026</p>
+    <div class="social-links">
+      <a href="https://github.com/calebvogt">GitHub</a> |
+      <a href="https://www.youtube.com/@CalebVogtPhD">YouTube</a> |
+      <a href="https://scholar.google.com/citations?user=0NAwiPEAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0001-9315-3775">OrcID</a> |
+      <a href="https://www.linkedin.com/in/caleb-c-vogt/">LinkedIn</a>
+    </div>
+    <p class="site-updated">Site updated: 2026-11-06 14:47:56 MST</p>
+  </div>
+</footer>
+
+</body>
+</html>

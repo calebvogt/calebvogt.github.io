@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking paper wasps in a face-learning assay | Caleb C. Vogt, PhD</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=1794001676">
+  <script src="/assets/js/page-transitions.js" defer></script>
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">
+      <img src="/assets/images/site/fieldNeuroRodent.png" alt="Logo" class="site-logo">
+      <div class="site-title-text">
+        <a href="/"><strong>Caleb C. Vogt, PhD</strong></a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/"><strong>Home</strong></a></li>
+        <li><a href="/publications"><strong>Publications</strong></a></li>
+        <li><a href="/projects"><strong>Projects</strong></a></li>
+        <li><a href="/gallery/"><strong>Gallery</strong></a></li>
+        <!-- <li><a href="/research"><strong>Research</strong></a></li> -->
+        <li><a href="/teaching/"><strong>Teaching</strong></a></li>
+        <!-- <li><a href="/posts"><strong>Posts</strong></a></li> -->
+        <li><a href="/resources"><strong>Resources</strong></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="header-spacer" aria-hidden="true"></div>
+<script src="/assets/js/site-header.js" defer></script>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+
+      <article class="project-detail">
+        <a class="project-back" href="/projects">&larr; All projects</a>
+
+        <h1 class="project-detail-title">Tracking paper wasps in a face-learning assay</h1>
+
+        <div class="project-detail-meta">
+          <span>2020–2022</span>
+          <span class="sep">·</span><span>Sheehan Lab, Cornell</span>
+          <span class="sep">·</span><span class="role">Co-author: tracking and zone analysis</span>
+        </div>
+
+        
+        <div class="project-tags project-detail-tags">
+          <span class="project-tag">Computer vision</span><span class="project-tag">DeepLabCut</span><span class="project-tag">SimBA</span><span class="project-tag">Pose estimation</span><span class="project-tag">Insect behavior</span>
+        </div>
+        
+
+        
+        <div class="project-links project-detail-links">
+          <a href="https://doi.org/10.1007/s10071-022-01691-9">Animal Cognition (2022)</a>
+        </div>
+        
+        
+        <div class="project-detail-hero">
+          <video autoplay muted loop playsinline preload="metadata" poster="/projects/paper-wasp-faces/tracking_clip_poster.jpg" aria-label="A paper wasp in the training arena, with its head, thorax and abdomen tracked by DeepLabCut">
+            <source src="/projects/paper-wasp-faces/tracking_clip.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+
+        <p class="project-detail-summary">For Christopher Jernigan's Animal Cognition study of face recognition in paper wasps, I tracked wasps in a face-learning arena with DeepLabCut and measured their movement and time in each zone with SimBA's region-of-interest tool.</p>
+
+        <div class="project-detail-body">
+          <p>Christopher Jernigan’s study asked whether northern paper wasps (<em>Polistes
+fuscatus</em>) need color to tell faces apart. Each wasp learned to discriminate
+two wasp faces, printed either in color or in grayscale, in a small arena with
+one face at each end and a floor that could deliver a mild shock in front of
+one of them. Every training and testing trial was filmed from above. My part
+was the computer-vision analysis of those videos.</p>
+
+<h2 id="what-i-did">What I did</h2>
+
+<ul>
+  <li><strong>Tracking with <a href="https://github.com/DeepLabCut/DeepLabCut">DeepLabCut</a>.</strong> A
+DeepLabCut model followed each wasp’s head, thorax and abdomen tip through
+every trial. The paper’s measures use the thorax, the same point the
+experimenters used to decide when a wasp had crossed into a zone. The model
+was trained on 589 hand-labelled frames from 89 videos, and positions below a
+0.9 likelihood were discarded.</li>
+  <li><strong><a href="https://github.com/sgoldenlab/simba">SimBA</a>’s region-of-interest tool.</strong>
+From the thorax track, SimBA measured how far each wasp moved, its average
+speed and the share of each trial it spent in the zone in front of each face
+(the shock-paired face and the safe face).</li>
+</ul>
+
+<p>The clip at the top is part of one unreinforced testing trial of a wasp trained
+on color faces: DeepLabCut’s head (blue), thorax (pink) and abdomen-tip
+(yellow) points.</p>
+
+<h2 id="the-paper">The paper</h2>
+
+<p>Jernigan, C.M., Stafstrom, J.A., Zaba, N.C., <strong>Vogt, C.C.</strong>, &amp; Sheehan, M.J.
+(2022). Color is necessary for face discrimination in the Northern paper wasp,
+<em>Polistes fuscatus</em>. <em>Animal Cognition</em>.
+<a href="https://doi.org/10.1007/s10071-022-01691-9">doi:10.1007/s10071-022-01691-9</a></p>
+
+<p>Read the paper for what the wasps learned and what it says about how they
+recognize faces.</p>
+
+<p>Thank you to Christopher Jernigan, who led this study.</p>
+
+        </div>
+      </article>
+
+    </div>
+  </main>
+  <footer>
+  <div class="container">
+    <p>Caleb C. Vogt &copy; 2026</p>
+    <div class="social-links">
+      <a href="https://github.com/calebvogt">GitHub</a> |
+      <a href="https://www.youtube.com/@CalebVogtPhD">YouTube</a> |
+      <a href="https://scholar.google.com/citations?user=0NAwiPEAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0001-9315-3775">OrcID</a> |
+      <a href="https://www.linkedin.com/in/caleb-c-vogt/">LinkedIn</a>
+    </div>
+    <p class="site-updated">Site updated: 2026-11-06 14:47:56 MST</p>
+  </div>
+</footer>
+
+</body>
+</html>
